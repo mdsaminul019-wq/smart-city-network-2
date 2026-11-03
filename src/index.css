@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --bg-navy-darkest: #070c18;
+  --bg-navy-main: #0b1329;
+  --bg-navy-surface: #131d38;
+  --bg-navy-card: #182444;
+  --border-navy: #223259;
+  --blue-electric: #00E5FF;
+  --blue-vibrant: #38BDF8;
+  --blue-deep: #0284C7;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background-color: var(--bg-navy-darkest);
+  color: #f8fafc;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+code, pre, .font-mono {
+  font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #090f20;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e2c50;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #00E5FF;
+}
+
+/* Pulse animation for packets */
+@keyframes packetPulse {
+  0% { transform: scale(0.9); opacity: 0.8; }
+  50% { transform: scale(1.2); opacity: 1; filter: drop-shadow(0 0 8px #00E5FF); }
+  100% { transform: scale(0.9); opacity: 0.8; }
+}
+
+.animate-packet {
+  animation: packetPulse 1.5s infinite ease-in-out;
+}

@@ -1,0 +1,6 @@
+{
+  "name": "Smart City Network",
+  "description": "Interactive college PBL presentation app for Smart City Network Design and Simulation using VLANs, Inter-VLAN Routing, OSPF, and DHCP.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
